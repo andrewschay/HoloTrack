@@ -1,0 +1,213 @@
+{
+    "Version": 1,
+    "UUID": "44cbaab3-3741-4be0-bfa1-dfa4a1293758",
+    "Name": "HoloTrack",
+    "Properties": {
+        "description": "Project Management for Holochain",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "RequiresVersion": 0,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "NeighborhoodSize": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    },
+    "Zomes": [
+        {
+            "Name": "holotrack",
+            "Description": "Core components of project management tool",
+            "CodeFile": "holotrack.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "handle",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "tag",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "project",
+                    "DataFormat": "json",
+                    "SchemaFile": "project_schema.json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "task",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "phase",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "issue",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "comment",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "handleCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "handleRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "projectCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "projectRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "taskCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "taskRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "phaseCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "phaseRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "issueCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "issueRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "commentCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "commentRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "assignTask",
+                    "CallingType": "json",
+                    "Exposure": ""
+                },
+                {
+                    "Name": "completeTask",
+                    "CallingType": "json",
+                    "Exposure": ""
+                },
+                {
+                    "Name": "completePhase",
+                    "CallingType": "json",
+                    "Exposure": ""
+                },
+                {
+                    "Name": "postComment",
+                    "CallingType": "json",
+                    "Exposure": ""
+                }
+            ]
+        },
+
+        {
+            "Name": "anchors",
+            "Description": "anchors mixin",
+            "RibosomeType": "js",
+            "CodeFile": "anchors.js",
+            "Config": {
+              "ErrorHandling": "throwErrors"
+            },
+            "Entries": [
+                {
+                    "Name": "anchor",
+                    "DataFormat": "json",
+                    "SchemaFile": "anchor.json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "anchor_link",
+                    "DataFormat": "links"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "anchor",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "exists",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "anchors",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>HoloTrack</title>
+</head>
+
+<body>
+  <main role="main" class="container">
+
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <p>
+            <h2>HoloTrack</h2>
+          </p>
+          </br>
+          <p>
+            <a href="./index.html">Go Home</a>
+          </p>
+          <p>
+            <a href="./createProject.html">Create a Project </a>
+          </p>
+          <p id="seeYourPostButton">
+            <a href="./viewProjects.html">Active Projects</a>
+          </p>
+
+        </div>
+        <div class="col-sm-8 text-center">
+          <h1>Create new project </h1>
+          <hr>
+        </div>
+        <div class="col-md-8 text-left">
+          <div>
+            <form id="createProjectForm">
+
+              <div class="page-header">
+
+                <div class="form-group row row-grid">
+                  <div class="col-md-4">
+                    <label class="col-2 col-form-label" for="titlePostInput">Title:</label>
+                    <input id="titlePostInput" type="text" name="titlePostInput">
+
+                  </div>
+                  <div class="col-md-4">
+                    <label class="col-2 col-form-label" for="postType">Type:</label>
+                    <select name="text" id="categoryPostInput">
+                      <option value="software">Software</option>
+                      <option value="hardware">Hardware</option>
+                      <option value="event">Event</option>
+                      <option value="personal">Personal</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label class="col-2 col-form-label" for="detailPostInput">Details:</label>
+                  <div class="col-10">
+                    <textarea id="detailPostInput" rows="10" cols="70" name="detailPostInput"></textarea>
+                  </div>
+
+                  <input type="submit" value="Submit">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </main>
+</body>
+<script src="./writePost.js"></script>
+
+</html>
